@@ -1,18 +1,15 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Mill Project</title>
+        <meta name="description" content="Rice mill digitalization" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </main>
+      <main>Rice mill project</main>
 
       <footer>footer</footer>
     </div>
