@@ -16,7 +16,10 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 
 readdirSync('./src/api/v1/routes').map((route) =>
-  app.use(`/api/${route.split('.')[0]}`, require(`./routes/${route}`))
+  app.use(
+    `/api/${route.split('.')[0]}`,
+    require(`./src/api/v1/routes/${route}`)
+  )
 );
 
 app.use(csrfProtection);
